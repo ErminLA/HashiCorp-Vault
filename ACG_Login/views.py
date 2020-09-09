@@ -34,7 +34,4 @@ def acg_login_view(request, *args, **kwargs):
         return HttpResponse('Unauthorized', status=401)
          
 
-def api_test(request, *args, **kwargs):
-    print(request.headers['Token'])
-    return HttpResponse('OK', status=200)
 
