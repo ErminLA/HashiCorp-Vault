@@ -16,11 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ACG_Login.views import acg_login_view, acg_login_view, home, api_test
+from ACG_Login.views import acg_login_view, acg_login_view, home
 
 urlpatterns = [
     path('', home, name='home'),
-    path('api_test', api_test, name='api_test'),
     path('login', acg_login_view, name='acg_login'),
     path('admin/', admin.site.urls),
 ]

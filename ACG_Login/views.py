@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.http import Http404
 
 import hashlib
 import urllib.request 
@@ -30,7 +29,6 @@ def acg_login_view(request, *args, **kwargs):
     if get_hashed_vault_creds() == credsHash:
         return HttpResponse('Authorized', status=200)
     else:
-        #raise Http404("Forbiden")
         return HttpResponse('Unauthorized', status=401)
          
 
