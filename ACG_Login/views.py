@@ -6,7 +6,6 @@ import urllib.request
 import json
 
 def home(request, *args, **kwargs):
-    #return HttpResponse("<h1>DOES IT WORK</h1>")
     return render(request, "home.html", {})
 
 def get_hashed_vault_creds():
